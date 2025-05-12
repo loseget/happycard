@@ -1,5 +1,5 @@
-// 模拟图片卡牌库，您需要替换为实际的图片文件名
-const imageCards = ['image1.jpg', 'image2.jpg', /* ... 其他图片文件名 ... */];
+// 更新图片卡牌库，包含所有 7 张图片
+const imageCards = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg', 'image7.jpg'];
 
 const drawButton = document.getElementById('drawButton');
 const cardTypeElement = document.getElementById('cardType');
