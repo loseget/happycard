@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幸福卡牌抽取器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>幸福卡牌抽取器</h1>
+    <button id="drawButton">抽取卡牌</button>
+    <div id="cardResult">
+        <p id="cardType"></p>
+        <p id="cardContent"></p>
+        <!-- 添加图片显示元素 -->
+        <img id="cardImage" src="" alt="抽取的卡牌图片" style="display: none; max-width: 100%; margin-top: 20px;">
+    </div>
+    <div id="actionSection">
+        <h2>幸福行动</h2>
+        <p id="happinessAction"></p>
+    </div>
+    <div id="recordSection">
+        <h2>记录您的幸福行动</h2>
+        <textarea id="recordInput" rows="4" cols="50"></textarea>
+        <button id="saveRecord">保存记录</button>
+        <ul id="recordList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
