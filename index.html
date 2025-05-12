@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>幸福卡牌抽取器</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
     <h1>幸福卡牌抽取器</h1>
-    <button id="drawButton">抽取卡牌</button>
+    <div class="button-container">
+        <button id="drawButton">抽取卡牌</button>
+        <button id="saveImageButton">保存图片</button>
+    </div>
     <div id="cardResult">
         <p id="cardType"></p>
         <p id="cardContent"></p>
@@ -26,5 +30,14 @@
         <ul id="recordList"></ul>
     </div>
     <script src="script.js"></script>
+    <script>
+        // 在 script.js 加载前绑定点击事件
+        document.getElementById('saveImageButton').addEventListener('click', function() {
+            // 假设 saveAsImage 函数在 script.js 中定义
+            if (typeof saveAsImage === 'function') {
+                saveAsImage();
+            }
+        });
+    </script>
 </body>
 </html>

@@ -34,6 +34,39 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.button-container {
+    display: flex;
+    gap: 10px; /* 按钮之间的间距 */
+    margin-bottom: 20px; /* 按钮容器与下方内容的间距 */
+}
+
+#drawButton, #saveImageButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#drawButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#drawButton:hover {
+    background-color: #45a049;
+}
+
+#saveImageButton {
+    background-color: #008CBA;
+    color: white;
+}
+
+#saveImageButton:hover {
+    background-color: #007B9A;
+}
+
 button {
     padding: 15px 30px;
     font-size: 18px;
@@ -92,4 +125,43 @@ button:hover {
     border-radius: 8px;
     margin-bottom: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 卡片飞出动画 */
+@keyframes cardFlyIn {
+    0% {
+        transform: translate(-100%, -100%) rotate(-360deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* 庆祝花飞动画 */
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: fixed;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6b6b;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: confettiFall 3s linear infinite;
+    pointer-events: none;
+}
+
+.card-fly-in {
+    animation: cardFlyIn 0.5s ease-out;
 }
